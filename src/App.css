@@ -1,38 +1,169 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
+
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  width: 85vw;
+  height: 75vh;
+  background-color: hsl(216, 50%, 16%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.image_container>img {
+  width: 90%;
+  height: 90%;
+  border-radius: 4%;
+}
+
+.image_container::before {
+  content: url('./assets/images/icon-view.svg');
+  position: absolute;
+  background-color: rgba(0, 255, 255, 0.404);
+  width: 90%;
+  height: 90%;
+  border-radius: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.image_container:hover:before {
+  opacity: 1;
+}
+
+@media(max-width:600px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+
+
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    width: 85vw;
+    height: 68vh;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  .image_container {
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .image_container>img {
+    width: 90%;
+    height: 90%;
+    border-radius: 4%;
+  }
+
+  .image_container::before {
+    display: none;
+  }
+
+
+
+  .details {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 7%;
+  }
+
+  .name {
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 7vw;
+    margin-top: -2.5vh;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .name:hover{
+    color: white;
+  }
+  .desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4vw;
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-top: 1vh;
+  }
+  .ether_block, .duration_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .amount, .time{
+    margin-left: 5px;
+  }
+  .amount{
+    color: cyan;
+    font-weight: 600;
+  }
+  hr {
+    width: 100%;
+    height: 0.5px;
+    background-color: hsl(215, 32%, 27%);
+    color: hsl(215, 32%, 27%);
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+  .owner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 10px;
+
+  }
+  .owner img {
+    width: 13%;
+  }
+  .text {
+    color: hsl(215, 51%, 70%);
+    margin-left: 5%;
+    font-size: 4vw;
+  }
+  .creator {
+    color: white;
+    margin-left: 2px;
+  }
+  .creator:hover{
+    color: white;
   }
 }
