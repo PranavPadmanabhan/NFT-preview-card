@@ -300,3 +300,60 @@ hr {
     color: white;
   }
 }
+
+@media (min-height:1500px){
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+  
+  }
+  
+  .card {
+    width: 40%;
+    min-height: 35vh;
+    min-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:  hsl(216, 50%, 16%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  .details {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 7%;
+  }
+  
+  .name {
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2vw;
+    margin-top: -1vh;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-top: 2vh;
+  }
+}
